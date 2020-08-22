@@ -1,6 +1,6 @@
 <template lang="pug">
   form
-    h3 Select a color
+    h3.select-header Select a color
     button(
       v-for="color in colors",
       :key="color",
@@ -21,3 +21,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.select-header {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+</style>

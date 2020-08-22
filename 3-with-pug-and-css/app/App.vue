@@ -1,6 +1,11 @@
 <template>
   <div class="whole-thing">
-    <h1 :style="{color: color}">{{ message }}</h1>
+    <!--
+      The CSS in ColorPicker.vue does not get applied to this header even
+      though it has the select-header class since that CSS rule is scoped to
+      ColorPicker.vue.
+    -->
+    <h1 :style="{color: color}" class="select-header">{{ message }}</h1>
     <input type="text" v-model="message" />
     <color-picker
       @color-change="colorChange"
