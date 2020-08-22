@@ -1,14 +1,11 @@
-<template>
-  <form>
-    <h3>Select a color</h3>
-    <button
-      v-for="color in colors"
-      :key="color"
+<template lang="pug">
+  form
+    h3 Select a color
+    button(
+      v-for="color in colors",
+      :key="color",
       @click.prevent="selectColor(color)"
-    >
-      {{ color }}
-    </button>
-  </form>
+    ) {{ color }}
 </template>
 
 <script>
